@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import "./components/Footer.tsx"
 import "./globals.css";
 
@@ -16,7 +17,7 @@ export default function RootLayout({
       lang="en"
     >
       <body className="min-h-full flex flex-col">
-      	<Header />
+      	<Header title="portfolio" />
       	
 	<main>
       	    {children}
