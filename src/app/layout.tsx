@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import "./components/Footer.tsx"
+import Footer from "./components/Footer.tsx"
 import "./globals.css";
 
 export const metadata: Metadata = {
