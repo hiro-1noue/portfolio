@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import "./components/Footer.tsx"
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
       	<Header title="portfolio" />
@@ -23,7 +23,7 @@ export default function RootLayout({
       	    {children}
 	</main>
 
-	<Footer />
+	<Footer title="portfolio"/>
       </body>
     </html>
   );
