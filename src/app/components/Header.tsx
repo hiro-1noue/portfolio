@@ -10,7 +10,7 @@ export default function Header({ title }: HeaderProps) {
       className="fixed top-0 z-50 w-full h-14 p-3 font-space"   
     >
       <div className="flex w-full h-full px-4 justify-between items-center">
-        <Link href="/" className="text-2xl">Hiro</Link>
+        <Link href="/" className="text-2xl">{ title }</Link>
 
         <nav className="flex justify-between items-center w-auto max-w-100 h-auto px-5 py-2 gap-4 rounded text-lg">
 	  <Link href="/" className="">Home</Link>

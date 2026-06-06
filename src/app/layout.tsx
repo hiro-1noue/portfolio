@@ -25,13 +25,13 @@ export default function RootLayout({
       className={spaceGrotesk.variable}
     >
       <body className="min-h-screen flex flex-col">
-      	<Header title="portfolio" />
+      	<Header title="Hiro" />
       	
 	<main className="flex-1">
       	    {children}
 	</main>
 
-	<Footer title="portfolio"/>
+	<Footer title="Hiro"/>
       </body>
     </html>
   );
