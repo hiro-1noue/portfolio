@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { SiQiita } from "react-icons/si";
 
 type FooterProbs = {
   title: string;
@@ -10,7 +12,7 @@ export default function Footer({ title }: FooterProbs) {
       <div className="w-full h-full flex justify-center items-center gap-16">
         <h1 className="text-4xl">{ title }</h1>
 
-	<div className="w-px h-full bg-white"></div>
+	<div className="w-px h-full bg-mauve-500"></div>
 
 	<nav className="flex gap-8">
 	  <Link href="/">Home</Link>
@@ -24,9 +26,15 @@ export default function Footer({ title }: FooterProbs) {
       </div>
 
       <div className="flex justify-end items-center gap-4">
-        <Link href="https://github.com/hiro-1noue">G</Link>
-	<Link href="https://x.com/hiro_1noue">X</Link>
-	<Link href="https://zenn.dev/hiro1noue">Z</Link>
+        <Link href="https://github.com/hiro-1noue" target="_blank">
+	  <FaGithub size={22} />
+	</Link>
+	<Link href="https://x.com/hiro_1noue" target="_blank">
+	  <FaXTwitter size={22} />
+	</Link>
+	<Link href="https://qiita.com/hiro-1noue" target="_blank">
+	  <SiQiita size={22} />
+	</Link>
       </div>
     </footer>
   );
