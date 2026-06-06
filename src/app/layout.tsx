@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Orbitron } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description: "This website is portfolio of hiro-1noue",
 };
 
-const orbitron = Orbitron({
+export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-orbitron",
+  variable: "--font-space-grotesk",
 });
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja" 
-      className={orbitron.variable}
+      className={spaceGrotesk.variable}
     >
       <body className="min-h-screen flex flex-col">
       	<Header title="portfolio" />
