@@ -2,11 +2,11 @@ import Link from "next/link";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { SiQiita } from "react-icons/si";
 
-type FooterProbs = {
+type FooterProps = {
   title: string;
 };
 
-export default function Footer({ title }: FooterProbs) {
+export default function Footer({ title }: FooterProps) {
   return (
     <footer className="w-full h-52 rounded-t-md bg-black text-white p-12 font-space">
       <div className="w-full h-full flex justify-center items-center gap-16">
