@@ -47,5 +47,5 @@ export default function Hero3D() {
     };
   }, []);
  
-  return <div ref={ref} className="absolute inset-0 -z-10" />;
+  return <div ref={ref} className="absolute ml-16 inset-0 -z-10" />;
 }

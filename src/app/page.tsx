@@ -7,8 +7,8 @@ export default function Home() {
     <section id="hero" className="relative w-full h-screen overflow-hidden">
       <Hero3D />
 
-      <div className="relative z-10">
-        <h1>Hiro Portfolio</h1>
+      <div className="relative w-full h-full z-10">
+        <h1 className="text-4xl absolute top-1/2 pl-4">Hiro's Portfolio</h1>
       </div>
     </section>
   );
