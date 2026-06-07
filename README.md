@@ -5,4 +5,8 @@
 - Host : Vercel
 
 ## How to use
-this website is made to use in vercel
+This website is made to use in vercel
+You can access this page with this url
+```
+https://portfolio2026-six-jade.vercel.app/
+```
