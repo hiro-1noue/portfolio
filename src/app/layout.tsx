@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
       	<Header title="Hiro" />
       	
-	<main className="flex-1">
+	<main className="flex-1 pt-14">
       	    {children}
 	</main>
 
