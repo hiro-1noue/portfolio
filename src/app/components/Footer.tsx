@@ -8,7 +8,7 @@ type FooterProps = {
 
 export default function Footer({ title }: FooterProps) {
   return (
-    <footer className="w-full h-52 rounded-t-md bg-black text-white p-12 font-space">
+    <footer className="w-full h-52 rounded-t-md bg-surface text-on-surface p-12 font-space">
       <div className="w-full h-full flex justify-center items-center gap-16">
         <h1 className="text-4xl">{ title }</h1>
 
