@@ -1,6 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import Hero3D from "./components/Hero3D";
+import WorkCard from "./components/WorkCard";
+
+const works = [
+  {
+    title: "Typers",
+    description: "Typing system for trackball written in Rust.",
+    tags: ["Rust"],
+    href: "/works/typers",
+  },
+  {
+    title: "Portfolio",
+    description: "Personal portfolio website.",
+    tags: ["Next.js", "TailwindCSS"],
+    href: "/works/portfolio",
+  },
+];
 
 export default function Home() {
   return (
@@ -25,12 +41,19 @@ export default function Home() {
 	</div>
       </section>
 
-      <section className="max-w-5xl mx-auto my- px-4">
+      <section className="max-w-5xl mx-auto my-16 px-4">
         <h2 className="text-3xl mb-8">Featured Works</h2>
 
 	<div className="grid md:grid-cols-2 gap-6">
-	   <WorkCard />
-	   <WorkCard />
+	  {works.map((work) => (
+	    <WorkCard
+	      key={work.title}
+	      title={work.title}
+	      description={work.description}
+	      tags={work.tags}
+	      href={work.href}
+	    />
+	  ))}
 	</div>
       </section>
     </>
