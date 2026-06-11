@@ -1,9 +1,24 @@
-"use client"
+"use client";
 
-export default function TransitonProvider({
+import { useState } from "react";
+
+export default function TransitionProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  const [state, setState] =
+    useState<"idle" | "closing" | "opening">(
+      "idle"
+    );
+
+  return (
+    <>
+      {children}
+
+      {state === "closing" && (
+        <div className="fixed inset-0 bg-black z-[9999]" />
+      )}
+    </>
+  );
 }
