@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence, } from "motion/react";
 
 export default function TransitionProvider({
   children,
@@ -9,7 +9,7 @@ export default function TransitionProvider({
   children: React.ReactNode;
 }) {
   const [state, setState] =
-    useState<"idle" | "closing" | "opening">(
+    useState<"idle" | "closing">(
       "idle"
     );
 
@@ -21,31 +21,26 @@ export default function TransitionProvider({
         onClick={() => setState("closing")}
         className="fixed top-4 right-4 z-[10000]"
       >
-        closing
+        close
       </button>
 
       <button
-        onClick={() => setState("opening")}
+        onClick={() => setState("idle")}
         className="fixed top-12 right-4 z-[10000]"
       >
-        opening
+        open
       </button>
 
-      {state !== "idle" && (
-        <motion.div
-          className="fixed inset-0 bg-black z-[9999]"
-          initial={
-            state === "closing"
-              ? { y: "-100%" }
-              : { y: "0%" }
-          }
-          animate={
-            state === "closing"
-              ? { y: "0%" }
-              : { y: "-100%" }
-          }
-        />
-      )}
+      <AnimatePresence>
+        {state === "closing" && (
+          <motion.div
+            className="fixed inset-0 bg-black z-[9999]"
+            initial={{ y: "-100%" }}
+            animate={{ y: "0%" }}
+            exit={{ y: "-100%" }}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }
