@@ -21,14 +21,29 @@ export default function TransitionProvider({
         onClick={() => setState("closing")}
         className="fixed top-4 right-4 z-[10000]"
       >
-        test
+        closing
       </button>
 
-      {state === "closing" && (
+      <button
+        onClick={() => setState("opening")}
+        className="fixed top-12 right-4 z-[10000]"
+      >
+        opening
+      </button>
+
+      {state !== "idle" && (
         <motion.div
           className="fixed inset-0 bg-black z-[9999]"
-          initial={{ y: "-100%" }}
-          animate={{ y: "0%" }}
+          initial={
+            state === "closing"
+              ? { y: "-100%" }
+              : { y: "0%" }
+          }
+          animate={
+            state === "closing"
+              ? { y: "0%" }
+              : { y: "-100%" }
+          }
         />
       )}
     </>
