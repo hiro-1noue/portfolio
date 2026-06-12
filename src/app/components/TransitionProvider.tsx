@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, } from "motion/react";
 
 export default function TransitionProvider({
@@ -12,6 +13,15 @@ export default function TransitionProvider({
     useState<"idle" | "closing">(
       "idle"
     );
+
+  const router = useRouter();
+
+  const [target, setTarget] = useState<string | null>(null);
+
+  function navigate(href: string) {
+    setTarget(href);
+    setState("closing");
+  }
 
   return (
     <>
@@ -38,6 +48,11 @@ export default function TransitionProvider({
             initial={{ y: "-100%" }}
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
+            onAnimationComplete={() => {
+              if (state == "closing" && target) {
+                router.push(target);
+              }
+            }}
           />
         )}
       </AnimatePresence>
