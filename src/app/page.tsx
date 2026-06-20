@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import Hero3D from "./components/Hero3D";
 
 export default function Home() {
@@ -8,7 +6,7 @@ export default function Home() {
       <Hero3D />
 
       <div className="relative w-full h-full z-10">
-        <h1 className="text-4xl absolute top-1/2 pl-4">Hiro's Portfolio</h1>
+        <h1 className="text-4xl absolute top-1/2 pl-4">Hiro&apos;s Portfolio</h1>
       </div>
     </section>
   );
