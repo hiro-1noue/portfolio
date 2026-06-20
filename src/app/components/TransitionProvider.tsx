@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence, } from "motion/react";
 
 export default function TransitionProvider({
@@ -15,6 +15,11 @@ export default function TransitionProvider({
     );
 
   const router = useRouter();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setState("idle");
+  }, [pathname]);
 
   const [target, setTarget] = useState<string | null>(null);
 
@@ -28,7 +33,7 @@ export default function TransitionProvider({
       {children}
 
       <button
-        onClick={() => setState("closing")}
+        onClick={() => navigate("/works")}
         className="fixed top-4 right-4 z-[10000]"
       >
         close
@@ -49,7 +54,7 @@ export default function TransitionProvider({
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             onAnimationComplete={() => {
-              if (state == "closing" && target) {
+              if (state === "closing" && target) {
                 router.push(target);
               }
             }}
