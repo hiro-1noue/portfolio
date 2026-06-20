@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import Hero3D from "./components/Hero3D";
 import WorkCard from "./components/WorkCard";
 

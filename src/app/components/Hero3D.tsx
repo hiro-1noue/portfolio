@@ -20,7 +20,8 @@ export default function Hero3D() {
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    ref.current?.appendChild(renderer.domElement);
+    const container = ref.current;
+    container?.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry();
     const material = new THREE.MeshBasicMaterial({
@@ -43,7 +44,7 @@ export default function Hero3D() {
     animate();
 
     return() => {
-      ref.current?.removeChild(renderer.domElement);
+      container?.removeChild(renderer.domElement);
     };
   }, []);
  
