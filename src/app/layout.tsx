@@ -3,6 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import TransitionProvider from "./components/TransitionProvider"
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BottomNav from "./components/BottomNav";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -30,11 +31,12 @@ export default function RootLayout({
           <Header title="Hiro" />
 
 
-          <main className="flex-1 pt-14">
+          <main className="flex-1 pt-14 pb-16 md:pb-0">
             {children}
           </main>
 
           <Footer title="Hiro" />
+          <BottomNav />
         </TransitionProvider>
       </body>
     </html>
