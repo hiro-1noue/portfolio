@@ -29,7 +29,7 @@ export default function Footer({ title }: FooterProps) {
         <Link href="https://github.com/hiro-1noue" target="_blank">
 	  <FaGithub size={22} />
 	</Link>
-	<Link href="https://x.com/hiro_1noue" target="_blank">
+	<Link href="https://x.com/hiro1noue" target="_blank">
 	  <FaXTwitter size={22} />
 	</Link>
 	<Link href="https://qiita.com/hiro-1noue" target="_blank">
