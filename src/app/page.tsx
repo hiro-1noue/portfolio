@@ -1,22 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import Hero3D from "./components/Hero3D";
 import WorkCard from "./components/WorkCard";
+import { works } from "./data/works";
 
-const works = [
-  {
-    title: "Typers",
-    description: "Typing system for trackball written in Rust.",
-    tags: ["Rust"],
-    href: "/works/typers",
-  },
-  {
-    title: "Portfolio",
-    description: "Personal portfolio website.",
-    tags: ["Next.js", "TailwindCSS"],
-    href: "/works/portfolio",
-  },
-];
+const featuredWorks = works.filter((w) => w.featured);
 
 export default function Home() {
   return (
@@ -45,7 +31,7 @@ export default function Home() {
         <h2 className="text-3xl mb-8">Featured Works</h2>
 
 	<div className="grid md:grid-cols-2 gap-6">
-	  {works.map((work) => (
+	  {featuredWorks.map((work) => (
 	    <WorkCard
 	      key={work.title}
 	      title={work.title}
