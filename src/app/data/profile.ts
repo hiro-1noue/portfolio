@@ -31,15 +31,22 @@ export const skills: SkillCategory[] = [
 
 export const timeline: TimelineItem[] = [
   {
+    year: 2010,
+    label: "生まれる",
+  },
+  {
     year: 2023,
     label: "プログラミング開始",
   },
   {
     year: 2024,
-    label: "Web 開発・セキュリティ学習開始",
+    label: "全国中学高校Webコンテスト プラチナ賞",
     works: [
-      { title: "Typers", href: "https://github.com/hiro-1noue/typers" },
-      { title: "Portfolio", href: "/" },
+      { title: "香川の水不足から世界を考える", href: "https://contest.japias.jp/tqj27/270007H/" },
     ],
+  },
+  {
+    year: 2026,
+    label: "セキュリティ・キャンプ2026全国大会 Z2ゼミ",
   },
 ];
