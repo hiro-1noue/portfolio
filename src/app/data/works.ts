@@ -8,10 +8,10 @@ export type Work = {
 
 export const works: Work[] = [
   {
-    title: "Typers",
-    description: "Typing system for trackball written in Rust.",
-    tags: ["Rust"],
-    href: "https://github.com/hiro-1noue/typers",
+    title: "香川の水不足から世界を考える",
+    description: "The website I made with team member when I was 14 yo",
+    tags: ["HTML", "CSS", "JS"],
+    href: "https://contest.japias.jp/tqj27/270007H/",
     featured: true,
   },
   {
@@ -20,5 +20,12 @@ export const works: Work[] = [
     tags: ["Next.js", "TailwindCSS"],
     href: "/",
     featured: true,
+  },
+  {
+    title: "Typers",
+    description: "Typing system for trackball written in Rust.",
+    tags: ["Rust"],
+    href: "https://github.com/hiro-1noue/typers",
+    featured: false,
   },
 ];
